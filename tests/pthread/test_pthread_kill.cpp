@@ -75,7 +75,4 @@ int main()
   // Finally test that the thread is not doing any work and it is dead.
   assert(sharedVar == 0);
   printf("Main: Done. Successfully killed thread. sharedVar: %d\n", sharedVar);
-#ifdef REPORT_RESULT
-  REPORT_RESULT(sharedVar);
-#endif
 }

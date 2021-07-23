@@ -118,7 +118,10 @@ function resetPrototype(constructor, attrs) {
 var wasmSourceMapData;
 #endif
 #if USE_OFFSET_CONVERTER
-var wasmOffsetData, wasmOffsetConverter;
+var wasmOffsetData;
+#if MODULARIZE
+var wasmOffsetConverter;
+#endif
 #endif
 
 function moduleLoaded() {

@@ -7,7 +7,7 @@ mergeInto(LibraryManager.library, {
 	glTexImage2D__deps: ['orig_glTexImage2D'],
 	glTexImage2D: function(target, level, internalFormat, width, height, border, format, type, pixels) {
 		_glTexImage2D.createdType = type;
-		_orig_glTexImage2D(target, level, internalFormat, width, height, border, format, type, pixels);
+		assert(_orig_glTexImage2D);
 	},
 
 	what_got_created: function() {
